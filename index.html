@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Three.js 101</title>
+  <style>
+    body { margin: 0; }
+    canvas { width: 100%; height: 100%; }
+    #toggleScript {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      background-color: rgba(0, 0, 0, 0); 
+      color: rgba(0, 0, 0, 0); 
+      border: none; 
+      box-shadow: none; 
+      outline: none; 
+      transform: translate(-50%, -50%); 
+    }
+    #backgroundVideo {
+      position: absolute;
+      width: 1px;
+      border: none; 
+      box-shadow: none; 
+      outline: none;
+      top: 50%;
+      left: 50%; 
+
+    }
+  </style>
+  <!--  Three.js CDN  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.128/examples/js/loaders/GLTFLoader.js"></script>
+</head>
+<body>
+  <button id="toggleScript">RATO</button>
+  <video id="backgroundVideo" autoplay muted loop>
+    <source src="assets/space.mp4" type="video/mp4">
+  </video>
+  <script id="scriptLoader" src="app.js"></script>
+  <script>
+    let clickCount = 0;
+    const maxClicks = 5;
+    const button = document.getElementById('toggleScript');
+    const scriptLoader = document.getElementById('scriptLoader');
+
+    button.addEventListener('click', () => {
+      clickCount++;
+      if (clickCount >= maxClicks) {
+        clickCount = 0;
+        
+        const newScriptSrc = scriptLoader.src.includes('app.js') ? 'rat.js' : 'app.js';
+        
+        document.body.removeChild(scriptLoader);
+        
+        const existingCanvas = document.querySelector('canvas');
+        if (existingCanvas) {
+          document.body.removeChild(existingCanvas);
+        }
+
+        const newScript = document.createElement('script');
+        newScript.id = 'scriptLoader';
+        newScript.src = newScriptSrc;
+        document.body.appendChild(newScript);
+      }
+    });
+  </script>
+</body>
+</html>
