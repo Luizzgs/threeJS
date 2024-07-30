@@ -19,7 +19,7 @@
 
 ## Preview 📷
 
-<blockquote class="imgur-embed-pub" lang="en" data-id="a/HuoFltr" data-context="false" ><a href="//imgur.com/a/HuoFltr"></a></blockquote><script async src="//s.imgur.com/min/embed.js" charset="utf-8"></script>
+![Imgur Image](https://imgur.com/a/nmW1MJN.png)
 
 ## Descrição 📄
 - Utilizado diferentes de geometrias: planetas e sol(esferas) anel de saturno(disco);
