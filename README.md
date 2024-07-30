@@ -13,7 +13,7 @@
 
 [![Button Example]][Link]
 
-[Link]: 'link demo' '3d demo.'
+[Link]: (https://luizzgs.github.io/threeJS/) '3d demo.'
 
 [Button Example]: https://img.shields.io/badge/demo-red?style=for-the-badge
 
