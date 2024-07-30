@@ -19,7 +19,7 @@
 
 ## Preview 📷
 
-![Imgur Image](https://imgur.com/a/nmW1MJN.png)
+![Imgur Image](https://i.imgur.com/ucJRPhT.png)
 
 ## Descrição 📄
 - Utilizado diferentes de geometrias: planetas e sol(esferas) anel de saturno(disco);
